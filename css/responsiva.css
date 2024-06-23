@@ -1,0 +1,76 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+.table{
+    width: 100%;
+    border: 3px solid palevioletred;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+.table caption{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+.table tr{
+    background-color: rgb(192, 223, 220);
+    border: 1px solid rgb(127, 127, 141);
+}
+.table th{
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(181, 255, 178);
+    color: rgb(25, 91, 107);
+}
+.table td{
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+.table thead th{
+    text-transform:uppercase;
+    background-color: lightcoral;
+}
+@media (min-width:100px) and (max-width:899px){
+    .table{
+        border: 0px;
+    }
+    .table caption{
+        font-size: 22px;
+    }
+    .table thead{
+        display: none;
+    }
+    .table tr{
+        margin-bottom: 8px;
+        border-bottom: 4px solid rgb(228, 207, 150);
+        display: block;
+    }
+    .table th{
+        font-size: 12px;
+    }
+    .table td{
+        font-size: 12px;
+        display: block;
+        border-bottom: 1px solid rgb(206, 143, 167);
+        text-align: right;
+    }
+    .table td:last-child{
+        border-bottom: 0px;
+    }
+    .table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
